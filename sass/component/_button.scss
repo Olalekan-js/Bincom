@@ -1,0 +1,36 @@
+/**************************
+****Button****************/
+.btn-inline {
+  font-size: 1.5rem;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--color-primary);
+  padding-bottom: .15rem;
+  border-bottom: 1px solid currentColor;
+  transition: color .4s;
+
+  &:hover {
+    color: var(--color-grey-dark-1);
+
+    & .review__arrow {
+      margin-left: 8px;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    display: inline-block;
+    animation: pulsate 1s infinite;
+  }
+
+  &--no-animation {
+
+    &:focus {
+      @include Query-Manager(tab-port-2) {
+        animation: none;
+      }
+    }  
+  }
+}

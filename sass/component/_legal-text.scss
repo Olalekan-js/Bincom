@@ -1,0 +1,12 @@
+/**********************
+*** Legal-Text *******/
+.legal-text {
+  font-size: 1.3rem;
+  color: var(--color-grey-light-4);
+  padding: 2.5rem;
+  text-align: center;
+
+  @include Query-Manager(tab-land-3) {
+    display: none;
+  }
+}

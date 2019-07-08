@@ -1,0 +1,64 @@
+/*******************
+**** Paragraph ****/
+.paragragh:not(:last-of-type) {
+  margin-bottom: 3rem;
+}
+
+/**************
+**** List ****/
+.list {
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex: 0 0 50%;
+    margin-bottom: .57rem;
+
+    @include Query-Manager(phone-size-5) {
+      flex: 0 0 45%;
+      white-space: nowrap;
+      //text-overflow: ellipsis;
+    }
+
+    &:nth-child(odd) {
+      @include Query-Manager(phone-size-5) {
+        margin-right: auto;
+      }
+    }
+
+    @include Query-Manager(tab-land-1) {
+      text-overflow: ellipsis;
+    }
+
+
+
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 1.3rem;
+      width: 1.3rem;
+      margin-right: .5rem;
+
+      /*Older browsers*/
+      /*background-image: url(../img/svg/chevron-thin-right.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: yellow;*/
+
+
+      /* Modern browsers*/
+      background-color: var(--color-primary);
+      -webkit-mask-image: url(../img/svg/chevron-thin-right.svg);
+      -webkit-mask-size: cover;
+      -moz-mask-image: url(../img/svg/chevron-thin-right.svg);
+      -moz-mask-size: cover;
+       mask-image: url(../img/svg/chevron-thin-right.svg);
+       mask-size: cover;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+/************************
+*** Overview ***********/
+.overview {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  border-bottom: var(--line);
+
+  &__heading {
+    font-size: 2rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: .9rem 1.5rem;
+    margin-right: 2rem;
+
+    @include Query-Manager(phone-size-3) {
+      font-size: 1.75rem;
+      padding: .7rem 1.3rem;
+      margin-right: 1.5rem;
+    }
+
+    @include Query-Manager(phone-size-5) {
+      margin-right: auto;
+    }
+  }
+
+  &__icon-box {
+    display: flex;
+    margin-right: auto;
+
+    @include Query-Manager(phone-size-5) {
+      display: none;
+    }
+  }
+
+  &__icon,
+  &__location-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: var(--color-primary);
+
+    @include Query-Manager(phone-size-4) {
+      width: 1.34rem;
+      height: 1.34rem;
+    }
+  }
+
+  &__location-icon {
+    margin-right: .41rem;
+
+    @include Query-Manager(phone-size-4) {
+      margin-right: .38rem;
+    }
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+  }
+
+  &__rating {
+    background-color: var(--color-primary);
+    align-self: stretch;
+    color: var(--color-white);
+    padding: 0 2rem;
+    //font-size: 1.2rem;
+    margin-left: 2.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include Query-Manager(phone-size-4) {
+      padding: 0 1.68rem;
+      margin-left: 2rem
+    }
+  }
+
+  &__rating-average {
+    font-size: 2rem;
+    font-weight: 100;
+
+    @include Query-Manager(phone-size-4) {
+      font-size: 1.85rem;
+    }
+  }
+
+  &__rating-count {
+    font-size: .82rem;
+    text-transform: uppercase;
+
+    @include Query-Manager(phone-size-4) {
+      font-size: .8rem;
+    }
+  }
+}

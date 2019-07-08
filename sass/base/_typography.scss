@@ -1,0 +1,21 @@
+html {
+  font-size: 62.5%;    // 10px
+
+  @include Query-Manager(tab-land-2) {
+    font-size: 56.25%;    // 9px
+  }
+
+  @include Query-Manager(tab-land-3) {
+    font-size: 53.125%;      // 8.5px
+  }
+
+  @include Query-Manager(phone-size-4) {
+    font-size: 51.875%;
+  }
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}

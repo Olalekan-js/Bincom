@@ -1,0 +1,91 @@
+.recommend {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+
+  @include Query-Manager(phone-size-5) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__count {
+    color: var(--color-grey-dark-2);
+    margin-right: auto;
+
+    @include Query-Manager(tab-port-2) {
+      font-size: 1.5rem;
+    }
+
+    @include Query-Manager(phone-size-5) {
+      margin-bottom: 1.4rem;
+    }
+  }
+
+
+  &__friends {
+    display: flex;
+  }
+
+  &__photo {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border: .4rem solid var(--color-white);
+
+    @include Query-Manager(tab-land) {
+      box-sizing: content-box;
+      width: 6.4rem;
+      height: 6.4rem;
+    }
+
+    @include Query-Manager(tab-land-3) {
+      width: 6.2rem;
+      height: 6.2rem;
+      border: .35rem solid var(--color-white);
+    }
+
+    @include Query-Manager(tab-port-2) {
+      width:7rem;
+      height: 7rem;
+      border-radius: 50%;
+      border: .4rem solid var(--color-white);
+    }
+
+    @include Query-Manager(phone-size-2) {
+      width: 6.4rem;
+      height: 6.4rem;
+    }
+
+    @include Query-Manager(phone-size-5) {
+      border: 0;
+    }
+
+    &:not(:last-child) {
+      margin-right: -3.5rem;
+
+      @include Query-Manager(tab-land) {
+        margin-right: -4rem;
+      }
+
+      @include Query-Manager(tab-land-1) {
+        margin-right: -4.2rem;
+      }
+
+      @include Query-Manager(tab-land-3) {
+        margin-right: -4.4rem;
+      }
+
+      @include Query-Manager(tab-port-2) {
+        margin-right: -3.3rem;
+      }
+
+      @include Query-Manager(phone-size-2) {
+        margin-right: -3.9rem;
+      }
+
+      @include Query-Manager(phone-size-5) {
+        margin-right: 0;
+      }
+    }
+  }
+}

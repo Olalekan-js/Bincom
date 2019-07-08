@@ -1,0 +1,98 @@
+.review {
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-light);        // I override this declaration with the other box-shadow bcos of the overflow setting
+  padding: 3rem;
+  overflow: hidden;
+  box-shadow: 0 .05rem .09rem rgba(0,0,0, .05rem);
+  position: relative;
+
+  @include Query-Manager(tab-port-2) {
+    //width: 100%;
+    overflow: visible;
+  }
+
+  &::before {
+    content: "\201c";
+    font-size: 22rem;
+    line-height: 1;
+    color: var(--color-grey-light-4);
+    position: absolute;
+    top: -3rem;
+    left: -.9rem;
+    z-index: 1
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 5rem;
+
+    @include Query-Manager(tab-land-1) {
+      margin-bottom: 4rem;
+    }
+
+    @include Query-Manager(phone-size-2) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__quote {
+    margin-bottom: 3.5rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+
+    &-photo {
+      width: 7.5rem;
+      height: 7.5rem;
+      border-radius: 50%;
+    }
+
+    &-name {
+      text-transform: uppercase;
+      font-size: 1.15rem;
+      letter-spacing: 1.1px;
+      font-weight: 800;
+
+      @include Query-Manager(tab-land) {
+        /*font-size: 1.24rem;
+        letter-spacing: 0;
+        font-weight: 600;*/
+      }
+    }
+
+    &-box {
+      margin: 0 auto 0 1.5rem;
+    }
+
+    &-box > * {
+      width: max-content;
+      margin-right: 2rem;
+    }
+  }
+
+  &__date {
+    font-size: 1.19rem;
+    color: var(--color-grey-dark-3);
+  }
+
+  &__rating {
+    font-size: 2.1rem;
+    font-weight: 100;
+    color: var(--color-primary);
+
+    @include Query-Manager(tab-land-1) {
+      /*position: absolute;
+      left: 9.3rem;
+      top: 3.8rem;*/
+    }
+
+  }
+
+  &__arrow {
+    margin-left: .3rem;
+    transition: margin-left .3s;
+  }
+}

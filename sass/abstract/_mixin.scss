@@ -1,0 +1,86 @@
+@mixin Query-Manager($breakpoint) {
+  @if $breakpoint == largest {
+    @media (max-width: 75em) {      // 75em == 1200px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {     // At this breakpoint,  the recommend photos decrease by .6rem
+    @media(max-width: 71.25em) {    // 71.25em == 1140px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land-1 {      // At this breakpoint, the review bottom-margin reduces by 1em and the review photos align by -4.2rem.
+    @media (max-width: 70.625rem) {    // 70.625em == 1130px
+      @content;
+    }
+  }
+
+
+  @if $breakpoint == tab-land-2 {  // At this breakpoint, there is new global font size
+    @media(max-width: 69.5em) {    // 69.5em == 1112px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land-3 {    // At this breakpoint, there is new global font size
+    @media(max-width: 63.125em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land-4 {    // At this breakpoint, the sidebar layout ultimately changes
+    @media (max-width: 57.25em) {    // 57.25em == 916px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port-1 {    // At this breakpoint, the spaces in the layout adjust themselves
+    @media (max-width: 50em) {      // 50em == 800px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port-2 {      // At this breakpoint, the detail layout changes
+    @media (max-width: 45.8125em) {    // 45.8125em == 733px
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone-size-1 {   // Nothing really happens
+    @media (max-width: 37.5em) {      // 37.5em == 600px
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone-size-2 {    // At this breakpoint, the recommend photos re-adjust a bit
+    @media (max-width: 36.0625em) {    // 36.0625em == 577px;
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone-size-3 {    // At this breakpoint, links in the global navigation, the overview heading adjust
+    @media (max-width: 34.625em) {     // 34.625em == 554px;
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone-size-4 {    // At this breakpoint, there is new global font size, and the overview rating, overview rating average and overview rating count adjust.
+    @media (max-width: 31.25em) {      // 31.25em == 500px
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone-size-5 {    // At this breakpoint, the list items have new dimension and re-adjustment
+    @media (max-width: 28.8125em) {    // 28.8125em == 461px
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone-size-6 {
+    @media (max-width: 26.875em) {    // 26.875em == 430px
+      @content;
+    }
+  }
+}
